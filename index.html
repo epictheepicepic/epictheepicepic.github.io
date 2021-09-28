@@ -10,15 +10,18 @@
     <button onclick="myFunction()">Clik</button>
 
     <script>
-        
-        var chance = Math.random();
+        var url = new URL(window.location.href);
+        var chance = url.searchParams.get("ch");
+        if (chance == null) {
+            chance = Math.random();
+        }
         console.log(chance);
         function myFunction() {
             if (chance > 0.1)
                 location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
             else
                 location.replace("https://www.youtube.com/watch?v=02vx2usBzpE");
-        }//
+        }
     </script>
 </body>
 </html>
