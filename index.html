@@ -7,6 +7,13 @@
     <title>Document</title>
 </head>
 <body>
+    <script>
+        var url = new URL(window.location.href);
+        var rick = url.searchParams.get("rick");
+        if (rick == "roll") {
+            window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        }
+    </script>
     Hi
 </body>
 </html>
